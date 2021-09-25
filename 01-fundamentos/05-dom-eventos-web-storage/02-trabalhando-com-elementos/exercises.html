@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+
+    <!-- favicon request disable -->
+    <link rel="shortcut icon" href="data:," />
+
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      // PART 01 - Structure
+      // 01 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      const h1Title = document.createElement("h1");
+      document.body.appendChild(h1Title);
+      h1Title.innerHTML = "Exercício 5.2 - JavaScript DOM";
+
+      // 02 - Adicione a tag main com a classe main-content como filho da tag body;
+      const main = document.createElement("main");
+      document.body.appendChild(main);
+      main.classList.add("main-content");
+
+      // 03 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      const sectionCenterContent = document.createElement("section");
+      document.querySelector(".main-content").append(sectionCenterContent);
+      sectionCenterContent.classList.add("center-content");
+
+      // 04 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      const paragraph = document.createElement("p");
+      document.querySelector(".center-content").append(paragraph);
+      paragraph.innerHTML =
+        "Pol, a bene animalis, indictio! Mensa camerarius mineralis est. Gluten, visus, et luba. A falsis, hippotoxota alter bromium. Potus mechanice ducunt ad dexter accola. Regius, pius silvas tandem experientia de dexter, placidus plasmator. Ubi est azureus imber. Nunquam acquirere abactor. Rumors crescere in hamburgum! Ubi est noster luna? Amors peregrinationes! Velox parma patienter talems domina est. Sunt mortemes fallere altus, superbus cottaes. Studere recte ducunt ad barbatus castor. Ecce, lanista! Cum turpis nocere, omnes candidatuses consumere castus, festus parmaes.";
+
+      // 05 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const sectionLeftContent = document.createElement("section");
+      document.querySelector(".main-content").append(sectionLeftContent);
+      sectionLeftContent.classList.add("left-content");
+
+      // 06 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      const sectionRightContent = document.createElement("section");
+      document.querySelector(".main-content").append(sectionRightContent);
+      sectionRightContent.classList.add("right-content");
+
+      // 07 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+      const imageLeftContent = document.createElement("img");
+      document.querySelector(".left-content").append(imageLeftContent);
+      imageLeftContent.classList.add("small-image");
+      imageLeftContent.src = "https://picsum.photos/200";
+
+      // 08 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      const ulRightContent = document.createElement("ul");
+      document.querySelector(".right-content").append(ulRightContent);
+      ulRightContent.classList.add("right-content-ul");
+      const liRightContentArr = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+
+      for (let index = 0; index < liRightContentArr.length; index += 1) {
+        let liRightContent = document.createElement("li");
+
+        liRightContent.classList.add("right-content-li");
+        document.querySelector(".right-content-ul").appendChild(liRightContent);
+        document.querySelectorAll(".right-content-li")[index].innerHTML =
+          liRightContentArr[index];
+      }
+
+      // 09 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+      let h3MainContent;
+      for (let index = 3; index > 0; index -= 1) {
+        h3MainContent = document.createElement("h3");
+        document.querySelector(".main-content").appendChild(h3MainContent);
+      }
+
+      // PART 02 - Mods & Remove
+      // 01 - Adicione a classe title na tag h1 criada;
+      h1Title.classList.add("title");
+
+      // 02 - Adicione a classe description nas 3 tags h3 criadas;
+      for (let index = 0; index < 3; index += 1) {
+        document.querySelectorAll('.main-content h3')[index].classList.add('description');
+      }
+
+      // 03 - Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      let sectionSelectLeftContent = document.querySelector('.left-content');
+      document.querySelector('.main-content').removeChild(sectionSelectLeftContent);
+
+      // 04 - Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+      document.querySelector('.main-content .right-content').style.marginRight = 'auto';
+
+      // 05 - Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+      let sectionParentSelect = document.querySelector('.center-content').parentElement;
+      sectionParentSelect.style.backgroundColor = 'green';
+
+      // 06 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+      for (let index = 0; index < 2; index += 1) {
+        let liRightContentSelectLastChild = document.querySelector('.right-content ul').lastChild;
+        document.querySelector('.right-content ul').removeChild(liRightContentSelectLastChild);
+      }
+    </script>
+  </body>
+</html>

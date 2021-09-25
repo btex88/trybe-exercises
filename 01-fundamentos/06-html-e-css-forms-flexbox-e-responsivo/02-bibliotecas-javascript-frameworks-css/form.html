@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Exercise - HTML/CSS - Forms</title>
+  </head>
+
+  <body>
+    <h1>Exercise - HTML/CSS - Forms</h1>
+    <form class="form-content">
+      <fieldset id="personal-info">
+        <div>
+          <label for="name">Full Name:</label>
+          <input
+            id="name"
+            type="text"
+            maxlength="40"
+            placeholder=" Type here..."
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            type="text"
+            maxlength="50"
+            placeholder=" Type here..."
+            required
+          />
+
+          <label for="cpf">CPF:</label>
+          <input
+            id="cpf"
+            type="text"
+            placeholder=" ___.___.___-__"
+            maxlength="14"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            required
+          />
+
+          <label for="address">Address:</label>
+          <input
+            id="address"
+            type="text"
+            maxlength="200"
+            placeholder=" Type here..."
+            required
+          />
+
+          <label for="city">City:</label>
+          <input
+            id="city"
+            type="text"
+            maxlength="28"
+            placeholder=" Type here..."
+            required
+          />
+
+          <label for="state">State</label>
+          <select name="state" id="state" required></select>
+        </div>
+
+        <div>
+          <label for="property-type">Property Type:</label>
+          <input id="apto" type="radio" name="property-type" class="custom-control custom-radio" />
+          <label for="apto">Apartment</label>
+
+          <input id="house" type="radio" name="property-type" class="custom-control custom-radio" />
+          <label for="house">House</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="past-job-info">
+        <label for="resume">Brief Resume:</label>
+        <textarea
+          name="resume"
+          id="resume"
+          cols="30"
+          rows="10"
+          maxlength="1000"
+          required
+        >
+        </textarea>
+
+        <label for="job-title">Job Title:</label>
+        <input type="text" maxlength="40" id="job-title" required />
+
+        <label for="job-description">Job Description:</label>
+        <textarea
+          name="job-description"
+          id="job-description"
+          cols="30"
+          rows="10"
+          maxlength="500"
+          required
+        >
+        </textarea>
+
+        <label for="start-date">Start Date</label>
+        <input class="some-input" type="text" id="start-date" name="date" required />
+      </fieldset>
+      <button id="submit" type="submit">Send</button>
+    </form>
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/js-datepicker"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

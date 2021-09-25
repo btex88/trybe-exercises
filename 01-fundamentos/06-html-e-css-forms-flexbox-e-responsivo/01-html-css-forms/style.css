@@ -1,0 +1,102 @@
+
+@import url('http://fonts.cdnfonts.com/css/yummah-strawberriez');
+
+
+@import url('http://fonts.cdnfonts.com/css/oxbot');
+
+@keyframes blink {
+  0% { text-shadow: 2px 2px 8px #485466 }
+  50% { text-shadow: none; }
+  100% { text-shadow: 2px 2px 8px #485466 }  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5%;
+  background-color: #AFC98F;
+  color: #485466;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-family: 'Yummah Strawberriez', sans-serif;
+  text-align: center;
+  animation: blink 4.0s linear infinite;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+#personal-info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 1px solid transparent;
+  padding: 2%;
+}
+
+#past-job-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+
+button,
+#apto,
+#house,
+#state,
+#start-date {
+  cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+  background-color: #EDE5DA;
+  color: #485466;
+  border: solid 1px #697784;
+  font-family: 'Oxbot', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+label {
+  font-family: 'Oxbot', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset div {
+  display: flex;
+  margin-top: 2%;
+}
+
+div label {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+div input {
+  flex-grow: 3;
+}

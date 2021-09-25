@@ -1,0 +1,36 @@
+      body {
+        background-color: lightpink;
+        font-size: 16px;        
+      }
+
+      h1 {
+        font-family: sans-serif;
+        font-style: italic;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 3em;
+        height: 3em;
+        text-decoration: overline;
+      }
+
+      ul { 
+        text-align: center;
+      }
+
+      ul li {
+        line-height: 2;
+      }
+
+      ul li:first-child {
+        background-color: yellow;
+      }
+
+      ul li:last-child {
+        background-color: brown;
+      }
+
+      ul li:nth-child(2) {
+        background-color: red;
+      }

@@ -1,0 +1,17 @@
+      body {
+        background-color: lightgoldenrodyellow;
+      }
+      
+      h1 {
+        font-size: 65px;
+        height: 65px;
+        color: orange;
+        }
+
+      ul li {
+        background-color: lightcoral;
+      }
+
+      .hero-text {
+        background-color: lightgreen;
+      }

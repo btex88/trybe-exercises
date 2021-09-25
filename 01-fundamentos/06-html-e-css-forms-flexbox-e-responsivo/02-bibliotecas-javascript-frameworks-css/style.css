@@ -1,0 +1,147 @@
+@import url('http://fonts.cdnfonts.com/css/yummah-strawberriez');
+
+@import url('http://fonts.cdnfonts.com/css/oxbot');
+
+@keyframes blink {
+	0% {
+		text-shadow: 2px 2px 8px #1d2b53;
+	}
+	50% {
+		text-shadow: none;
+	}
+	100% {
+		text-shadow: 2px 2px 8px #1d2b53;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body {
+	margin: 5% auto;
+  max-width: 65%;
+  height: 100%;
+	background-color: #afc98f;
+	color: #485466;
+	user-select: none;
+}
+
+h1 {
+	font-family: 'Yummah Strawberriez', sans-serif;
+	text-align: center;
+	font-weight: bold;
+	animation: blink 4s linear infinite;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+fieldset {
+	border: 1px solid transparent;
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#personal-info {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 2%;
+  margin-top: 2%;
+}
+
+#personal-info label {
+  flex-basis: 18%;
+  margin-top: 3%;
+
+}
+
+#personal-info input {
+  flex-basis: 78%;
+  margin-top: 3%;
+
+}
+
+#personal-info select {
+  flex-basis: 78%;
+  margin-top: 3%;
+  text-align: center;
+}
+
+#personal-info div:nth-child(2) {
+	height: 10vh;
+}
+
+#personal-info div:nth-child(2) input {
+  flex-basis: 5%;
+}
+
+#personal-info div:nth-child(2) label {
+	width: 100%;
+}
+
+#personal-info div:nth-child(2) label:first-child{
+  flex-basis: 100%;
+  text-align: center;
+}
+
+#past-job-info {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	padding: 2%;
+}
+
+button,
+#apto,
+#house,
+#state {
+	cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+	background-color: #ede5da;
+	color: #485466;
+	border: solid 1px #697784;
+	font-family: 'Oxbot', sans-serif;
+	font-size: 0.8rem;
+	line-height: 1.5;
+}
+
+label {
+	font-family: 'Oxbot', sans-serif;
+}
+
+textarea {
+	resize: none;
+}
+
+#past-job-info label {
+  padding-top: 2%;
+}
+
+#submit {
+  align-self: center;
+  width: 20%;
+  padding: 1%;
+}
