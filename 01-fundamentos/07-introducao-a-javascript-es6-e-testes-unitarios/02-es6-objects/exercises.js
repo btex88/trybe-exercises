@@ -118,7 +118,8 @@ const lesson3 = {
 };
 
 const changeClassShift = (obj, key, value) =>  obj[key] = value;
-//console.log(changeClassShift(lesson2, 'turno', 'noite'));
+//changeClassShift(lesson2, 'turno', 'noite');
+//console.log(obj);
 
 const listObjKeys = obj => console.log(Object.keys(obj))
 // listObjKeys(lesson3);
@@ -151,7 +152,7 @@ const keyValueObj = obj => {
 keyValueObj(lesson1);
 
 const objValueKeyVerify = (obj, key, value) => {
-  if (obj[key] && obj[value]) {
+  if (obj.hasOwnProperty(key) && obj[key] === value) {
     return true;
   } else {
     return false;
