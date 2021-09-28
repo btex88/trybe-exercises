@@ -1,0 +1,15 @@
+{
+  "name": "03-es6-testes-unitarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-remove.js",
+  "dependencies": {
+    "jest": "^27.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
