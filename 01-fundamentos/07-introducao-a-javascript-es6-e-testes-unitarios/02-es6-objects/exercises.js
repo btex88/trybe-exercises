@@ -56,8 +56,7 @@ const customerInfo = (order) => {
   AP: ${order.address.apartment}
   `);
 };
-
-// customerInfo(order);
+customerInfo(order);
 
 const orderModifier = (order) => {
   const pizzaFlavours = Object.keys(order.order.pizza);
@@ -74,8 +73,7 @@ const orderModifier = (order) => {
   },00.
   `);
 };
-
-// orderModifier(order);
+orderModifier(order);
 
 //============================================================================
 //================================= PART 02 ==================================
@@ -118,17 +116,16 @@ const lesson3 = {
 };
 
 const changeClassShift = (obj, key, value) =>  obj[key] = value;
-//changeClassShift(lesson2, 'turno', 'noite');
-//console.log(obj);
+console.log(changeClassShift(lesson2, 'turno', 'noite'));
 
 const listObjKeys = obj => console.log(Object.keys(obj))
-// listObjKeys(lesson3);
+listObjKeys(lesson3);
 
 const objSize = obj => Object.keys(obj).length;
-//console.log(objSize(lesson1));
+console.log(objSize(lesson1));
 
 const listObjValues = obj => console.log(Object.values(obj))
-//listObjValues(lesson2);
+listObjValues(lesson2);
 
 let allLessons;
 const groupObjects = (...obj) => allLessons = obj;
@@ -158,5 +155,4 @@ const objValueKeyVerify = (obj, key, value) => {
     return false;
   }
 };
-
 console.log(objValueKeyVerify(lesson3, 'turno', 'noite'));
