@@ -12,7 +12,7 @@ const students = [
   {studentName: 'Marlene', exam: 6.5, project: 8, groupProject: 5},
 ];
 
-  /* Disclaimer
+/* Disclaimer
   Throughout this code will be seen the usage of Immediately Invoked Function Expression (IIFE) in those loop statements,. that implementation is to secure the lexical scope of the loop
   Source: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 */
