@@ -128,9 +128,11 @@ const listObjValues = obj => console.log(Object.values(obj))
 listObjValues(lesson2);
 
 let allLessons;
+//= Object.assign({},{ lesson1, lesson2, lesson3 })
+
 const groupObjects = (...obj) => allLessons = obj;
 groupObjects(lesson1, lesson2, lesson3);
-console.table(allLessons);
+console.log(allLessons);
 
 const studentCount = studentNumber => {
   studentNumber = 0;
@@ -156,3 +158,4 @@ const objValueKeyVerify = (obj, key, value) => {
   }
 };
 console.log(objValueKeyVerify(lesson3, 'turno', 'noite'));
+

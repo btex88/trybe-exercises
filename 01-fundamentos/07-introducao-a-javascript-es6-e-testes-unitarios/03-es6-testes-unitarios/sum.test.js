@@ -1,4 +1,3 @@
-const { it } = require('@jest/globals');
 const sum = require('./sum');
 
 test('if 4 + 5 is equal to 9', () => {
