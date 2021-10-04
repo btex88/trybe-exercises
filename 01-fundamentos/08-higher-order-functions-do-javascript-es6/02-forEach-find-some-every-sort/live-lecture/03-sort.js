@@ -27,7 +27,7 @@ const numbers = [12, 3, 5, 7, 123, 55, 90, 0, 13];
   return console.log(numbers);
 })();
 
-// with comparefn
+// with comparefn (compare function)
 (() => {
   numbers.sort((x, y) => x - y);
   return console.log(numbers);
