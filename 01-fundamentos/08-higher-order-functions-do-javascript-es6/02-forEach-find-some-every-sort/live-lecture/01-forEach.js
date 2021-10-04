@@ -17,9 +17,11 @@ const students = [
   Source: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 */
 
-/*****************************************************************
-********************* forEach - Example 01 ***********************
-*****************************************************************/
+//=================================================================
+//=================================================================
+/******************************************************************
+********************** forEach - Example 01 ***********************
+******************************************************************/
 
 // Using a classic for statement
 (() => {for (let index = 0; index < players.length; index += 1) {
@@ -45,9 +47,11 @@ const students = [
 // Second argument → The index parameter on forEach method returns the info of the element stored into a key in the array.
 // Third argument → The array parameter on forEach method the whole content of the array is returned.
 
-/*****************************************************************
-********************* forEach - Example 02 ***********************
-*****************************************************************/
+//=================================================================
+//=================================================================
+/******************************************************************
+********************** forEach - Example 02 ***********************
+******************************************************************/
 
 // Using for...of
 (() => {for (const [index, num] of numbers.entries()) {
@@ -59,11 +63,14 @@ const students = [
   //console.log(`${index} :: ${num} | result → ${num * 5}`);
 }))();
 
-/*****************************************************************
-********************* forEach - Example 03 ***********************
-*****************************************************************/
+//=================================================================
+//=================================================================
+/******************************************************************
+********************** forEach - Example 03 ***********************
+******************************************************************/
 
 (() => students.forEach(value => {
   const result = (value.exam + value.project + value.groupProject) / 3;
+  // Usage of ternary conditional operator to verify a conditional expression
   result < 7 ? console.log(`A pessoa estudante ${value.studentName} tirou uma média insuficiente: ${result.toFixed(2)}`) : console.log(`A pessoa estudante ${value.studentName} passou com média ${result.toFixed(2)}`);
 }))();

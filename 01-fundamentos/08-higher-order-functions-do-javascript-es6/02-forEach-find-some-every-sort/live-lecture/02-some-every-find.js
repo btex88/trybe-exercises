@@ -132,4 +132,3 @@ const people = [
   - Second argument → The index parameter on forEach method returns the info of the element stored into a key in the array.
   - Third argument → The array parameter on forEach method the whole content of the array is returned.
 */
-
