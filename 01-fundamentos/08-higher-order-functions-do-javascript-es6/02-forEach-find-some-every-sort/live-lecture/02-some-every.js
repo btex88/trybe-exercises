@@ -47,6 +47,7 @@ const people = [
 /****************************
 ****** some arguments *******
 *****************************
+  - The return will be a boolean value.
   - If one element of my array satisfy the statement condition, it will return true.
   - The some() method it's a kind of predicate function, that's because it takes the given value (an array), and throughout it's iteration will verify if the condition is satisfied, returning true or false for it's verification.
   - It accepts any name that is given, but its default is index, value and array.
@@ -83,6 +84,7 @@ const people = [
 /****************************
 ****** every arguments ******
 *****************************
+  - The return will be a boolean value.
   - If every element of my array satisfy the statement condition, it will return true.
   - The every() method, it will verify if all the elements of the array satisfy the condition, so it will run throughout the array, not just until it breaks
   - It is also a kind of predicate function and has the same arguments as the some method.
@@ -121,6 +123,7 @@ const people = [
 /****************************
 ****** find arguments *******
 *****************************
+  - The return will be the first element that matches the condition passed.
   - The first element of my array satisfy the statement condition, will be returned.
   - The find() method, it will verify if the array, and the first element that satisfies the condition statement will be returned.
   - It is also a kind of predicate function but different from some() and every() method the return will be the element of the array.
