@@ -62,7 +62,7 @@ function createHolidayButton(string) {
 }
 createHolidayButton('Feriado')
 
-function changeHolidayBackground() {
+//function changeHolidayBackground() {
 // for ()let index = 0; index < }
 
 function createFriday (fridayString) {
@@ -103,8 +103,5 @@ function changeTextSize() {
       event.currentTarget.style.fontSize = '2rem';
     })
 
-
   }
-}
-
-
+};
