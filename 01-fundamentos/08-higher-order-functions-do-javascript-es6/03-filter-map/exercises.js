@@ -74,7 +74,7 @@ const books = [
     });
     console.log(result);
   };
-  formattedBookNames();
+  //formattedBookNames();
 })();
 
 
@@ -91,18 +91,26 @@ const books = [
     });
     console.log(result)
   };
-  nameAndAge();
+  //nameAndAge();
 })();
 
 
 // 03 - filter() - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 (() => {
   const fantasyOrScienceFiction = () => {
-    const newArr = books.filter((books) => books.genre === 'Ficção Científica' || books.genre === 'Fantasia');
-    console.log(newArr);
+    const result = books.filter((books) => books.genre === 'Ficção Científica' || books.genre === 'Fantasia');
+    console.log(result);
   };
-  fantasyOrScienceFiction();
+  //fantasyOrScienceFiction();
 })();
 
 
 // 04 - filter() && sort() - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+(() => {
+  const oldBooksOrdered = () => {
+    const result = books.filter(books => (2021 - books.releaseYear) > 60);
+    result.sort((value1, value2) => value1.releaseYear - value2.releaseYear);
+    console.log(result);
+  }
+  oldBooksOrdered();
+})()
