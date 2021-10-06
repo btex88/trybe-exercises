@@ -128,4 +128,4 @@ const authorUnique = () => {
   // IndexOf method extracted from https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3
 };
 
-console.log(authorUnique());
+//console.log(authorUnique());
