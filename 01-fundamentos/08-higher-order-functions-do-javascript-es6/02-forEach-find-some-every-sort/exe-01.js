@@ -123,11 +123,9 @@ const someBookWasReleaseOnThe80s = () => {
 // 07 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 const authorUnique = () => {
   const result = [];
-  return books.forEach((books) => { 
-    result.push(books.author.birthYear);
-    result.sort((x, y) => x - y);
-    return result[0];
-  });
+  books.forEach(books => result.push(books.author.birthYear));
+  return result.some((booksArr, index) => result.indexOf(booksArr) !== index);
+  // IndexOf method extracted from https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3
 };
 
 console.log(authorUnique());
