@@ -93,8 +93,22 @@ const books = [
 (() => {
   const averageAge = () => {
     let result = books.reduce((gather, value, index ,arr) => gather += (value.releaseYear - value.author.birthYear) / arr.length, 0);
-    return result.toFixed(2);
+    return result.toFixed();
   };
-  console.log(averageAge());
+  // console.log(averageAge());
 })();
 
+
+// 04 - Encontre o livro com o maior nome.
+(() => {
+  const longestNamedBook = () => {
+    const result = books.reduce((gather, value) => {
+      if (gather.name.length < value.name.length) {
+        gather = value;
+      }
+      return gather;
+    });
+    return result;
+  };
+  // console.log(longestNamedBook());
+})();
