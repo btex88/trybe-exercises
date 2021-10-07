@@ -29,7 +29,7 @@ const numbers = [12, 3, 5, 7, 123, 55, 90, 0, 13];
 
 // with comparefn (compare function)
 (() => {
-  numbers.sort((x, y) => x - y);
+  numbers.sort((x, y) => y - x);
   return console.log(numbers);
 })()
 
