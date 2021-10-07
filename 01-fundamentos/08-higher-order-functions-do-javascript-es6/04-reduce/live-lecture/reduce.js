@@ -68,6 +68,12 @@ const books = [
   },
 ];
 
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
 
 // 01 - Dada uma matriz, transforme em um array.
 (() => {
@@ -112,3 +118,14 @@ const books = [
   };
   // console.log(longestNamedBook());
 })();
+
+// 05 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra "a" maiúscula ou minúscula.
+(() => {
+  const containsA = () => {
+    let resultUpper = names.reduce((gather, value) => {gather += ',' + value.split(''); return countUpper = gather.match(/A/g).join('')},'').length;
+    let resultLower = names.reduce((gather, value) => {gather += ',' + value.split(''); return countUpper = gather.match(/a/g).join('')},'').length;  
+    
+    return {A: resultUpper, a: resultLower};
+  }
+  console.log(containsA());
+})()
