@@ -69,7 +69,7 @@ const books = [
 ];
 
 
-// 1 - Dada uma matriz, transforme em um array.
+// 01 - Dada uma matriz, transforme em um array.
 (() => {
   const flatten = () => {
     let result = arr.reduce((initValue, value) => initValue += ',' + value);
@@ -79,3 +79,11 @@ const books = [
 })();
 
 
+// 02 - Crie uma string com os nomes de todas as pessoas autoras.
+(() => {
+  const reduceNames = () => {
+    let result = books.reduce((init, value) => init += ' ' + value.author.name + ',', '');
+    return result = result.slice(1, -1);
+  }
+  console.log(reduceNames());
+})();
