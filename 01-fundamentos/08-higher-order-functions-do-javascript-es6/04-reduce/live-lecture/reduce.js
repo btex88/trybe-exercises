@@ -1,4 +1,4 @@
-// Global const
+// Global variables to be used in the exercises
 const arr = [
   ['1', '2', '3'],
   [true],
@@ -74,6 +74,9 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
+const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+
+const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 // 01 - Dada uma matriz, transforme em um array.
 (() => {
@@ -88,8 +91,8 @@ const names = [
 // 02 - Crie uma string com os nomes de todas as pessoas autoras.
 (() => {
   const reduceNames = () => {
-    let result = books.reduce((init, value) => init += ' ' + value.author.name + ',', '');
-    return result = result.slice(1, -1);
+    let result = books.reduce((init, value) => ` ${init += value.author.name},`, '');
+    return result = result.slice(1, -1) + '.';
   }
   // console.log(reduceNames());
 })();
@@ -97,9 +100,10 @@ const names = [
 
 // 03 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 (() => {
+  // toFixed() returns a string value.
   const averageAge = () => {
-    let result = books.reduce((gather, value, index ,arr) => gather += (value.releaseYear - value.author.birthYear) / arr.length, 0);
-    return result.toFixed();
+    //  Input Raphael
+    return books.reduce((gather, value, _ ,arr) => gather += (value.releaseYear - value.author.birthYear) , 0) / books.length;
   };
   // console.log(averageAge());
 })();
@@ -108,23 +112,39 @@ const names = [
 // 04 - Encontre o livro com o maior nome.
 (() => {
   const longestNamedBook = () => {
-    const result = books.reduce((gather, value) => {
-      if (gather.name.length < value.name.length) {
-        gather = value;
-      }
-      return gather;
-    });
-    return result;
+    return books.reduce((gather, value) => { if (gather.name.length < value.name.length) gather = value; return gather});
   };
   // console.log(longestNamedBook());
 })();
 
+
 // 05 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra "a" maiúscula ou minúscula.
 (() => {
+  // console.log(JSON.stringify(names).toLocaleLowerCase().match(/a/g).length)
+})();
+
+(() => {
   const containsA = () => {
-    let resultUpper = names.reduce((gather, value) => {gather += ',' + value.split(''); return gather.match(/A/g).join('')},'').length;
-    let resultLower = names.reduce((gather, value) => {gather += ',' + value.split(''); return gather.match(/a/g).join('')},'').length;  
-    return {A: resultUpper, a: resultLower};
+    return names.reduce((gather, value) => {
+      gather += value.split(''); 
+      return gather.toUpperCase().match(/A/g).join('')
+    },'').length;   
   }
-  console.log(containsA());
+  // console.log(containsA());
+})();
+
+
+// 06. - Agora vamos criar um novo array de objetos a partir das informações abaixo, onde cada objeto terá o formato { name: nome do aluno, average: media das notas } . Para isso vamos assumir que a posição 0 de notas refere-se ao aluno na posição 0 de alunos , aqui além de reduce será necessário utilizar também a função map . Dica: Você pode acessar o index do array dentro de map , e você pode ver o objeto esperado na constante expected .
+
+(() => {
+  const studentAverage = () => {
+    gradesAvgList = grades.map((value, index) => ({
+      name: students[index], 
+      average: value.reduce((acc, value) => {acc += value; return acc}, 0) / value.length,
+    }));
+    console.log(gradesAvgList);
+  };
+  studentAverage();
 })()
+
+
