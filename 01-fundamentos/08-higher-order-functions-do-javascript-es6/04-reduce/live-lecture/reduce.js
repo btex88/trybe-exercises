@@ -120,7 +120,7 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 // 05 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra "a" maiúscula ou minúscula.
 (() => {
-  // console.log(JSON.stringify(names).toLocaleLowerCase().match(/a/g).length)
+  console.log(JSON.stringify(names).match(/a/gi).length)
 })();
 
 (() => {
@@ -146,5 +146,4 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
   };
   studentAverage();
 })()
-
 
