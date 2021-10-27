@@ -1,8 +1,13 @@
 # Ignore vscode hidden folder
-./vscode
+.vscode/
+./.vscode/
+./vscode/
+
 
 # Ignore WebStorm hidden folder
 .idea/
+./.idea/
+./idea/
 
 # Ignore node_modules folder
 node_modules
