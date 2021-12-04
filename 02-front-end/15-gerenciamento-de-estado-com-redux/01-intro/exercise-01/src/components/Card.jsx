@@ -16,10 +16,7 @@ const Card = ({ colors, index, previous, next }) => {
   );
 };
 
-const mapStateProps = (state)  => ({
-  colors: state.colors,
-  index: state.index,
-});
+const mapStateProps = ({ changeColor: {colors, index }}) => ({ colors, index });
 
 const mapDispatchProps = (dispatch) => ({
   previous: () => dispatch({ type: 'PREVIOUS_COLOR'}),
