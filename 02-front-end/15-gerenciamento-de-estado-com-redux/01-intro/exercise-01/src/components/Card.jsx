@@ -1,13 +1,29 @@
+import React from 'react';
+import { connect } from 'react-redux';
 import Button from './Button';
+import styles from '../styles/Card.module.css';
 
-const Card = ({ color, previous, next }) => {
+const Card = ({ colors, index, previous, next }) => {
   return (
-    <div>
-      <span>Color: {color}</span>
+    <div className={styles.container}>
+      <h1 style={{
+        backgroundColor: colors[index],
+        color: colors[index-1]
+        }}>Color: {colors[index]}</h1>
       <Button clickFn={previous} name="Previous color" />
       <Button clickFn={next} name="Next color" />
     </div>
   );
 };
 
-export default Card;
+const mapStateProps = (state)  => ({
+  colors: state.colors,
+  index: state.index,
+});
+
+const mapDispatchProps = (dispatch) => ({
+  previous: () => dispatch({ type: 'PREVIOUS_COLOR'}),
+  next: () => dispatch({ type: 'NEXT_COLOR'}),
+})
+
+export default connect(mapStateProps, mapDispatchProps)(Card);
